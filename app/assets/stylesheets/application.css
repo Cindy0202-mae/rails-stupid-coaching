@@ -1,18 +1,3 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
@@ -23,26 +8,33 @@ body {
   margin: 0;
 }
 
-.form-container {
+.chat-container {
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.form-container h1 {
+.chat-container h1 {
   margin-bottom: 20px;
+  text-align: center;
 }
 
-.form-container input[type="text"] {
+.chat-container input[type="text"] {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  box-sizing: border-box;
 }
 
-.form-container input[type="submit"] {
+.chat-container input[type="submit"] {
   width: 100%;
   padding: 10px;
   background-color: #007BFF;
@@ -52,28 +44,34 @@ body {
   cursor: pointer;
 }
 
-.form-container input[type="submit"]:hover {
+.chat-container input[type="submit"]:hover {
   background-color: #0056b3;
 }
 
-.answer-container {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.answer-container h1 {
-  margin-bottom: 20px;
-}
-
-.answer-container p {
+.chat-container p {
   font-size: 18px;
   margin-bottom: 20px;
+  text-align: left;
+  width: 100%;
 }
 
-.answer-container a {
+.chat-container .question {
+  background-color: #e1f5fe;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.chat-container .answer {
+  background-color: #fff3e0;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.chat-container a {
   display: inline-block;
   padding: 10px 20px;
   background-color: #007BFF;
@@ -83,6 +81,6 @@ body {
   transition: background-color 0.3s;
 }
 
-.answer-container a:hover {
+.chat-container a:hover {
   background-color: #0056b3;
 }
